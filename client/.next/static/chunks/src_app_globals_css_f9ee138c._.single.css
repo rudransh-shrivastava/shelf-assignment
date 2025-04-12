@@ -1025,10 +1025,6 @@
     background-color: var(--destructive);
   }
 
-  .bg-gray-200 {
-    background-color: var(--color-gray-200);
-  }
-
   .bg-popover {
     background-color: var(--popover);
   }

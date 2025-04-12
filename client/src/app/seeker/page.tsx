@@ -28,7 +28,10 @@ export default function SeekerPage() {
   // Ensure the code runs only on the client, fetch user from localStorage and redirect if not valid.
   useEffect(() => {
     const storedUser = JSON.parse(localStorage.getItem("user") || "null");
-    if (storedUser.role !== "seeker" && storedUser.role !== "owner") {
+    if (
+      !storedUser ||
+      (storedUser.role !== "seeker" && storedUser.role !== "owner")
+    ) {
       router.push("/login");
       return;
     } else {
@@ -40,8 +43,9 @@ export default function SeekerPage() {
 
   const fetchBooks = async () => {
     const url = "/api/books";
-    const serverUrl =
-      process.env.SERVER_URL + url || `http://localhost:3001${url}`;
+    const serverUrl = process.env.SERVER_URL
+      ? process.env.SERVER_URL + url
+      : `http://localhost:3001${url}`;
     const res = await fetch(serverUrl);
     setBooks(await res.json());
   };

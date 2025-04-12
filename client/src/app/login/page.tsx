@@ -32,8 +32,9 @@ export default function LoginPage() {
     setErrorMessage(""); // clear previous error message
 
     const url = isLogin ? "/api/login" : "/api/register";
-    const serverUrl =
-      process.env.SERVER_URL + url || `http://localhost:3001${url}`;
+    const serverUrl = process.env.SERVER_URL
+      ? process.env.SERVER_URL + url
+      : `http://localhost:3001${url}`;
 
     try {
       const response = await fetch(serverUrl, {
@@ -54,7 +55,7 @@ export default function LoginPage() {
       // eslint-disable-next-line
     } catch (error: any) {
       console.error("Authentication error:", error);
-      setErrorMessage(error.message);
+      setErrorMessage("Invalid Credentials");
     }
   };
 

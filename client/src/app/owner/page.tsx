@@ -43,8 +43,9 @@ export default function OwnerPage() {
 
   const fetchBooks = async () => {
     const url = "/api/books";
-    const serverUrl =
-      process.env.SERVER_URL + url || `http://localhost:3001${url}`;
+    const serverUrl = process.env.SERVER_URL
+      ? process.env.SERVER_URL + url
+      : `http://localhost:3001${url}`;
     const res = await fetch(serverUrl);
     let resBooks = await res.json();
 

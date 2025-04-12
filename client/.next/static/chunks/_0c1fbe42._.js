@@ -215,7 +215,7 @@ function SeekerPage() {
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "SeekerPage.useEffect": ()=>{
             const storedUser = JSON.parse(localStorage.getItem("user") || "null");
-            if (storedUser.role !== "seeker" && storedUser.role !== "owner") {
+            if (!storedUser || storedUser.role !== "seeker" && storedUser.role !== "owner") {
                 router.push("/login");
                 return;
             } else {
@@ -227,7 +227,7 @@ function SeekerPage() {
     }["SeekerPage.useEffect"], []);
     const fetchBooks = async ()=>{
         const url = "/api/books";
-        const serverUrl = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].env.SERVER_URL + url || `http://localhost:3001${url}`;
+        const serverUrl = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].env.SERVER_URL ? __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].env.SERVER_URL + url : `http://localhost:3001${url}`;
         const res = await fetch(serverUrl);
         setBooks(await res.json());
     };
@@ -244,12 +244,12 @@ function SeekerPage() {
                             children: "Seeker Dashboard"
                         }, void 0, false, {
                             fileName: "[project]/src/app/seeker/page.tsx",
-                            lineNumber: 61,
+                            lineNumber: 65,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/seeker/page.tsx",
-                        lineNumber: 60,
+                        lineNumber: 64,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -262,7 +262,7 @@ function SeekerPage() {
                                     children: "Search by title or location"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/seeker/page.tsx",
-                                    lineNumber: 65,
+                                    lineNumber: 69,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -272,24 +272,24 @@ function SeekerPage() {
                                     onChange: (e)=>setSearch(e.target.value)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/seeker/page.tsx",
-                                    lineNumber: 68,
+                                    lineNumber: 72,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/seeker/page.tsx",
-                            lineNumber: 64,
+                            lineNumber: 68,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/seeker/page.tsx",
-                        lineNumber: 63,
+                        lineNumber: 67,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/seeker/page.tsx",
-                lineNumber: 59,
+                lineNumber: 63,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -306,12 +306,12 @@ function SeekerPage() {
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/seeker/page.tsx",
-                                    lineNumber: 83,
+                                    lineNumber: 87,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/seeker/page.tsx",
-                                lineNumber: 82,
+                                lineNumber: 86,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -323,7 +323,7 @@ function SeekerPage() {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/seeker/page.tsx",
-                                        lineNumber: 88,
+                                        lineNumber: 92,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -336,7 +336,7 @@ function SeekerPage() {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/seeker/page.tsx",
-                                        lineNumber: 89,
+                                        lineNumber: 93,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -346,30 +346,30 @@ function SeekerPage() {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/seeker/page.tsx",
-                                        lineNumber: 92,
+                                        lineNumber: 96,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/seeker/page.tsx",
-                                lineNumber: 87,
+                                lineNumber: 91,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, book.id, true, {
                         fileName: "[project]/src/app/seeker/page.tsx",
-                        lineNumber: 81,
+                        lineNumber: 85,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/src/app/seeker/page.tsx",
-                lineNumber: 79,
+                lineNumber: 83,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/seeker/page.tsx",
-        lineNumber: 57,
+        lineNumber: 61,
         columnNumber: 5
     }, this);
 }

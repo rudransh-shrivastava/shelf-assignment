@@ -198,7 +198,7 @@ function OwnerPage() {
     }, []);
     const fetchBooks = async ()=>{
         const url = "/api/books";
-        const serverUrl = process.env.SERVER_URL + url || `http://localhost:3001${url}`;
+        const serverUrl = process.env.SERVER_URL ? process.env.SERVER_URL + url : `http://localhost:3001${url}`;
         const res = await fetch(serverUrl);
         let resBooks = await res.json();
         // Remove all books that dont match the current user's ID
@@ -262,17 +262,17 @@ function OwnerPage() {
                         children: "Owner Dashboard"
                     }, void 0, false, {
                         fileName: "[project]/src/app/owner/page.tsx",
-                        lineNumber: 99,
+                        lineNumber: 100,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/app/owner/page.tsx",
-                    lineNumber: 98,
+                    lineNumber: 99,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/owner/page.tsx",
-                lineNumber: 97,
+                lineNumber: 98,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Card"], {
@@ -289,7 +289,7 @@ function OwnerPage() {
                                     children: "Title"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/owner/page.tsx",
-                                    lineNumber: 107,
+                                    lineNumber: 108,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
@@ -303,13 +303,13 @@ function OwnerPage() {
                                     required: true
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/owner/page.tsx",
-                                    lineNumber: 108,
+                                    lineNumber: 109,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/owner/page.tsx",
-                            lineNumber: 106,
+                            lineNumber: 107,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -320,7 +320,7 @@ function OwnerPage() {
                                     children: "Author"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/owner/page.tsx",
-                                    lineNumber: 119,
+                                    lineNumber: 120,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
@@ -334,13 +334,13 @@ function OwnerPage() {
                                     required: true
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/owner/page.tsx",
-                                    lineNumber: 120,
+                                    lineNumber: 121,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/owner/page.tsx",
-                            lineNumber: 118,
+                            lineNumber: 119,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -351,7 +351,7 @@ function OwnerPage() {
                                     children: "Genre"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/owner/page.tsx",
-                                    lineNumber: 131,
+                                    lineNumber: 132,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
@@ -364,13 +364,13 @@ function OwnerPage() {
                                         })
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/owner/page.tsx",
-                                    lineNumber: 132,
+                                    lineNumber: 133,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/owner/page.tsx",
-                            lineNumber: 130,
+                            lineNumber: 131,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -381,7 +381,7 @@ function OwnerPage() {
                                     children: "Location"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/owner/page.tsx",
-                                    lineNumber: 142,
+                                    lineNumber: 143,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
@@ -395,13 +395,13 @@ function OwnerPage() {
                                     required: true
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/owner/page.tsx",
-                                    lineNumber: 143,
+                                    lineNumber: 144,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/owner/page.tsx",
-                            lineNumber: 141,
+                            lineNumber: 142,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -410,18 +410,18 @@ function OwnerPage() {
                             children: "Add Book"
                         }, void 0, false, {
                             fileName: "[project]/src/app/owner/page.tsx",
-                            lineNumber: 153,
+                            lineNumber: 154,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/owner/page.tsx",
-                    lineNumber: 105,
+                    lineNumber: 106,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/owner/page.tsx",
-                lineNumber: 104,
+                lineNumber: 105,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -434,12 +434,12 @@ function OwnerPage() {
                                     children: book.title
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/owner/page.tsx",
-                                    lineNumber: 163,
+                                    lineNumber: 164,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/owner/page.tsx",
-                                lineNumber: 162,
+                                lineNumber: 163,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -452,7 +452,7 @@ function OwnerPage() {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/owner/page.tsx",
-                                        lineNumber: 166,
+                                        lineNumber: 167,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -463,7 +463,7 @@ function OwnerPage() {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/owner/page.tsx",
-                                        lineNumber: 167,
+                                        lineNumber: 168,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -474,13 +474,13 @@ function OwnerPage() {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/owner/page.tsx",
-                                        lineNumber: 168,
+                                        lineNumber: 169,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/owner/page.tsx",
-                                lineNumber: 165,
+                                lineNumber: 166,
                                 columnNumber: 13
                             }, this),
                             user && book.ownerId === user.id && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -495,7 +495,7 @@ function OwnerPage() {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/owner/page.tsx",
-                                        lineNumber: 172,
+                                        lineNumber: 173,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -505,30 +505,30 @@ function OwnerPage() {
                                         children: "Delete"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/owner/page.tsx",
-                                        lineNumber: 175,
+                                        lineNumber: 176,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/owner/page.tsx",
-                                lineNumber: 171,
+                                lineNumber: 172,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, book.id, true, {
                         fileName: "[project]/src/app/owner/page.tsx",
-                        lineNumber: 161,
+                        lineNumber: 162,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/src/app/owner/page.tsx",
-                lineNumber: 159,
+                lineNumber: 160,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/owner/page.tsx",
-        lineNumber: 95,
+        lineNumber: 96,
         columnNumber: 5
     }, this);
 }
