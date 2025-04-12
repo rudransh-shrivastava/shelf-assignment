@@ -32,7 +32,8 @@ export default function LoginPage() {
     setErrorMessage(""); // clear previous error message
 
     const url = isLogin ? "/api/login" : "/api/register";
-    const serverUrl = `http://localhost:3001${url}`;
+    const serverUrl =
+      process.env.SERVER_URL + url || `http://localhost:3001${url}`;
 
     try {
       const response = await fetch(serverUrl, {

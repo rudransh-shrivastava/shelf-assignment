@@ -39,7 +39,10 @@ export default function SeekerPage() {
   }, []);
 
   const fetchBooks = async () => {
-    const res = await fetch("http://localhost:3001/api/books");
+    const url = "/api/books";
+    const serverUrl =
+      process.env.SERVER_URL + url || `http://localhost:3001${url}`;
+    const res = await fetch(serverUrl);
     setBooks(await res.json());
   };
 

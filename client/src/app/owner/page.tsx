@@ -42,7 +42,10 @@ export default function OwnerPage() {
   }, []);
 
   const fetchBooks = async () => {
-    const res = await fetch("http://localhost:3001/api/books");
+    const url = "/api/books";
+    const serverUrl =
+      process.env.SERVER_URL + url || `http://localhost:3001${url}`;
+    const res = await fetch(serverUrl);
     let resBooks = await res.json();
 
     // Remove all books that dont match the current user's ID
