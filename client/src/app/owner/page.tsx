@@ -43,7 +43,18 @@ export default function OwnerPage() {
 
   const fetchBooks = async () => {
     const res = await fetch("http://localhost:3001/api/books");
-    setBooks(await res.json());
+    let resBooks = await res.json();
+
+    // Remove all books that dont match the current user's ID
+    const storedUser = JSON.parse(localStorage.getItem("user") || "null");
+    // eslint-disable-next-line
+    resBooks = resBooks.filter((book: any) => {
+      if (book.ownerId === storedUser.id) {
+        return true;
+      }
+      return false;
+    });
+    setBooks(resBooks);
   };
 
   const addBook = async (e: React.FormEvent) => {

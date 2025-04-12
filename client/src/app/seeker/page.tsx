@@ -84,7 +84,7 @@ export default function SeekerPage() {
             <CardContent>
               <p>Location: {book.location}</p>
               <p>
-                Owner: {book.owner.name} ({book.owner.email})
+                Owner: {book.owner?.name} ({book.owner?.email})
               </p>
               <p>Status: {book.status}</p>
             </CardContent>

@@ -17,7 +17,9 @@ export default function NavBar() {
       setUser(JSON.parse(storedUser));
     }
   }, []);
-
+  const handleDashboard = () => {
+    router.push("/owner");
+  };
   const handleLogout = () => {
     localStorage.removeItem("user");
     setUser(null);
@@ -32,17 +34,27 @@ export default function NavBar() {
           <span className="font-bold text-lg">Shelf Assignment Submission</span>
         </Link>
       </div>
-      {/* Login / Logout button */}
-      <div>
-        {user ? (
-          <Button variant="destructive" onClick={handleLogout}>
-            Logout
-          </Button>
-        ) : (
-          <Button variant="default" onClick={() => router.push("/login")}>
-            Login
-          </Button>
-        )}
+      {/* Dashboard button */}
+      <div className="flex gap-2">
+        <div>
+          {user?.role === "owner" ? (
+            <Button onClick={handleDashboard}>Dashboard</Button>
+          ) : (
+            ""
+          )}
+        </div>
+        {/* Login / Logout button */}
+        <div>
+          {user ? (
+            <Button variant="destructive" onClick={handleLogout}>
+              Logout
+            </Button>
+          ) : (
+            <Button variant="default" onClick={() => router.push("/login")}>
+              Login
+            </Button>
+          )}
+        </div>
       </div>
     </nav>
   );
